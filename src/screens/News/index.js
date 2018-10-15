@@ -21,7 +21,6 @@ class News extends React.PureComponent {
 
   render() {
     const { articles, viewArticle, article }  = this.props
-    console.log(articles, 'ARTICLES')
     return (
       <View style={{ flex: 1 }}>
         <ScrollView style={styles.container}>
