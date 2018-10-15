@@ -8,9 +8,9 @@
     "platforms": ["ios", "android"],
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/images/icon.png",
+    "icon": "./assets/mma-fan-app-icon.png",
     "splash": {
-      "image": "./assets/images/splash.png",
+      "image": "./assets/mma-fan-splash.png",
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
@@ -21,7 +21,9 @@
       "**/*"
     ],
     "ios": {
-      "supportsTablet": true
+      "bundleIdentifier": "com.jcanver.mma-fan",
+      "supportsTablet": true,
+      "buildNumber": "1.0.0"
     }
   }
 }

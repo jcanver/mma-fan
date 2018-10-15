@@ -21,11 +21,12 @@ class News extends React.PureComponent {
 
   render() {
     const { articles, viewArticle, article }  = this.props
+    console.log(articles, 'ARTICLES')
     return (
       <View style={{ flex: 1 }}>
         <ScrollView style={styles.container}>
           {articles && articles.map(article => (
-            <Touchable key={article.id} style={styles.articleWrapper} onPress={() => viewArticle(article.id)}>
+            <Touchable key={article.id} onPress={() => viewArticle(article.id)}>
               <View style={styles.articleWrapper}>
                 {article.thumbnail ? (
                   <Image source={{ uri: article.thumbnail }} style={styles.thumbnail} />
