@@ -1,0 +1,10 @@
+{
+  "compilerOptions": {
+      "target": "es6",
+      "module": "es6",
+      "baseUrl": "./src",
+      "jsx": "react-native",
+      "experimentalDecorators": true,
+      "alwaysStrict": true
+  }
+}

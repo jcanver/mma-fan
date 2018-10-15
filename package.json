@@ -1,0 +1,48 @@
+{
+  "name": "my-new-project",
+  "main": "node_modules/expo/AppEntry.js",
+  "private": true,
+  "scripts": {
+    "start": "expo start",
+    "android": "expo start --android",
+    "ios": "expo start --ios",
+    "eject": "expo eject",
+    "test": "node ./node_modules/jest/bin/jest.js --watchAll"
+  },
+  "jest": {
+    "preset": "jest-expo"
+  },
+  "dependencies": {
+    "@expo/samples": "2.1.1",
+    "axios": "^0.18.0",
+    "expo": "29.0.0",
+    "invariant": "^2.2.4",
+    "lodash": "^4.17.10",
+    "moment": "^2.22.2",
+    "prop-types": "^15.6.2",
+    "react": "16.3.1",
+    "react-native": "https://github.com/expo/react-native/archive/sdk-29.0.0.tar.gz",
+    "react-navigation": "^2.9.3",
+    "react-redux": "^5.0.7",
+    "reducers": "^3.0.0-alpha",
+    "redux": "^4.0.0",
+    "redux-logger": "^3.0.6",
+    "redux-saga": "^0.16.0",
+    "remote-redux-devtools": "^0.5.13",
+    "reselect": "^3.0.1",
+    "warning": "^4.0.2"
+  },
+  "devDependencies": {
+    "babel-eslint": "^8.2.6",
+    "babel-plugin-transform-remove-console": "^6.9.0",
+    "babel-preset-react-native": "2.0.0",
+    "eslint": "^5.4.0",
+    "eslint-config-react-tools": "^1.1.6",
+    "eslint-plugin-babel": "^5.1.0",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-jsx-a11y": "^5.0.1",
+    "eslint-plugin-react": "^7.11.1",
+    "eslint-plugin-redux-saga": "^0.9.0",
+    "jest-expo": "29.0.0"
+  }
+}
