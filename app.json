@@ -21,9 +21,12 @@
       "**/*"
     ],
     "ios": {
-      "bundleIdentifier": "com.jcanver.mma-fan",
+      "bundleIdentifier": "com.jcanver.mmafan",
       "supportsTablet": true,
       "buildNumber": "1.0.0"
+    },
+    "android": {
+      "package": "com.jcanver.mmafan"
     }
   }
 }
