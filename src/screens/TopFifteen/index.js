@@ -24,7 +24,7 @@ export class TopFifteen extends React.PureComponent {
               back={this.props.navigation.goBack}
               label={division}
             />
-            {fighters ? fighters.map((fighter, index) => (
+            {fighters ? fighters.map((fighter, index) => fighter ? (
               <Row
                 rank={index}
                 key={`${fighter.first_name}----${fighter.last_name}${index}`}
@@ -33,7 +33,7 @@ export class TopFifteen extends React.PureComponent {
                 imageSrc={fighter.profile_image}
                 onPress={() => setFighter(fighter.id)}
               />
-            )) : null}
+            ) : null) : null}
           </View>
         </ScrollView>
         <FighterWebView

@@ -12,7 +12,7 @@
     "splash": {
       "image": "./assets/mma-fan-splash.png",
       "resizeMode": "contain",
-      "backgroundColor": "#ffffff"
+      "backgroundColor": "#537173"
     },
     "updates": {
       "fallbackToCacheTimeout": 0

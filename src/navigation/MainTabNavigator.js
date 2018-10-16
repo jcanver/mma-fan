@@ -21,9 +21,13 @@ const RankingsStack = createStackNavigator({
   initialRouteName: 'Rankings'
 });
 
+const viewStyle = {
+  alignItems: 'center'
+}
+
 RankingsStack.navigationOptions = {
   tabBarLabel: ({ focused }) => (
-    <View>
+    <View style={viewStyle}>
       <Text bold style={{ color: focused ? theme.primary : theme.mediumGray }}>Rankings</Text>
     </View>
   ),
@@ -43,7 +47,7 @@ const EventsStack = createStackNavigator({
 
 EventsStack.navigationOptions = {
   tabBarLabel: ({ focused }) => (
-    <View>
+    <View style={viewStyle}>
       <Text bold style={{ color: focused ? theme.primary : theme.mediumGray }}>Events</Text>
     </View>
   ),
@@ -63,7 +67,7 @@ const NewsStack = createStackNavigator({
 
 NewsStack.navigationOptions = {
   tabBarLabel: ({ focused }) => (
-    <View>
+    <View style={viewStyle}>
       <Text bold style={{ color: focused ? theme.primary : theme.mediumGray }}>News</Text>
     </View>
   ),

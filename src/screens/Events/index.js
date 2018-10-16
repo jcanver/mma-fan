@@ -1,5 +1,5 @@
 import React from 'react'
-import { StyleSheet, ScrollView } from 'react-native'
+import { StyleSheet, View, ScrollView } from 'react-native'
 import { connect } from 'react-redux'
 import { createStructuredSelector } from 'reselect'
 
@@ -21,27 +21,28 @@ class Events extends React.PureComponent {
     const { events } = this.props
 
     return (
-      <ScrollView style={styles.container}>
-        {events && events.map((event, index) => {
-          if (event.base_title !== 'UFC Fight Night' && event.base_title !== 'Tuesday Night Contender Series' && index < 100) {
-            return (
-              <Event
-                key={index}
-                event={event}
-              />
-            )
+      <View style={styles.container}>
+        <ScrollView>
+          {events && events.map((event, index) => {
+            if (event.base_title !== 'UFC Fight Night' && event.base_title !== 'Tuesday Night Contender Series' && index < 100) {
+              return (
+                <Event
+                  key={index}
+                  event={event}
+                />
+              )
+            }
+            return null
           }
-          return null
-        }
-        )}
-      </ScrollView>
+          )}
+        </ScrollView>
+      </View>
     )
   };
 }
 
 const styles = StyleSheet.create({
   container: {
-    marginTop: 20,
     flex: 1
   }
 })

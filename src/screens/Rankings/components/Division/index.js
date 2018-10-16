@@ -31,6 +31,8 @@ class Division extends React.PureComponent {
     const { champInfo, rankingsInfo } = this.state
     const { division, divisionKey, showTopFifteen } = this.props
 
+    console.log(division, rankingsInfo)
+
     return (
       <View>
         <Heading
@@ -47,28 +49,28 @@ class Division extends React.PureComponent {
               <Icon name="beltFilled" fill="gold" width={20} height={20} style={{ marginRight: 8 }} />
               <Label centered bold color="gold">CHAMPION</Label>
             </View>
-            {champInfo && (
+            {champInfo ? (
               <Champ
                 firstName={champInfo.first_name}
                 lastName={champInfo.last_name}
                 imageSrc={champInfo.belt_thumbnail}
                 record={`${champInfo.wins}-${champInfo.losses}-${champInfo.draws}`}
               />
-            )}
+            ) : null}
           </View>
           <View style={{ width: '58%' }}>
             <View style={styles.heading}>
               <Label centered bold color="mediumGray">CHALLENGERS</Label>
             </View>
 
-            {rankingsInfo && (
+            {(rankingsInfo && divisionKey !== 'womenFeather') ? (
               <TopFive
                 division={division}
                 divisionKey={divisionKey}
                 fighters={rankingsInfo}
                 showTopFifteen={showTopFifteen}
               />
-            )}
+            ) : null}
           </View>
         </View>
       </View>

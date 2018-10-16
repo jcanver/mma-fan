@@ -22,8 +22,8 @@ class News extends React.PureComponent {
   render() {
     const { articles, viewArticle, article }  = this.props
     return (
-      <View style={{ flex: 1 }}>
-        <ScrollView style={styles.container}>
+      <View style={styles.container}>
+        <ScrollView>
           {articles && articles.map(article => (
             <Touchable key={article.id} onPress={() => viewArticle(article.id)}>
               <View style={styles.articleWrapper}>
@@ -53,7 +53,7 @@ class News extends React.PureComponent {
 
 const styles = StyleSheet.create({
   container: {
-    marginTop: 20,
+    flex: 1
   },
   articleWrapper: {
     flexDirection: 'row',
