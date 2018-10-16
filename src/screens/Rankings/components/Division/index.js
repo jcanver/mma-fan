@@ -31,8 +31,6 @@ class Division extends React.PureComponent {
     const { champInfo, rankingsInfo } = this.state
     const { division, divisionKey, showTopFifteen } = this.props
 
-    console.log(division, rankingsInfo)
-
     return (
       <View>
         <Heading
