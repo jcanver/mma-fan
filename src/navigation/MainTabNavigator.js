@@ -86,5 +86,5 @@ export default createBottomTabNavigator({
   EventsStack,
   NewsStack,
 }, {
-  initialRouteName: 'EventsStack'
+  initialRouteName: 'RankingsStack'
 });

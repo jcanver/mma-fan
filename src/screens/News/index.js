@@ -53,13 +53,22 @@ class News extends React.PureComponent {
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1
+    flex: 1,
+    paddingTop: 4
   },
   articleWrapper: {
     flexDirection: 'row',
-    paddingVertical: 12,
-    borderBottomWidth: 1,
-    borderColor: theme.mediumGray
+    padding: 12,
+    backgroundColor: theme.white,
+    marginVertical: 6,
+    marginHorizontal: 12,
+    shadowColor: '#000',
+    shadowOpacity: 0.15,
+    shadowOffset: {
+      width: 2,
+      height: 4
+    },
+    shadowRadius: 6,
   },
   placeholder: {
     width: 160,

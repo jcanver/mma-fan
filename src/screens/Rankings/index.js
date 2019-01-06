@@ -6,6 +6,7 @@ import {
 } from 'react-native'
 
 import Division from './components/Division'
+import DivisionSkeleton from './components/DivisionSkeleton'
 import rankings from './rankings'
 import mapToProps from './mapToProps'
 
@@ -16,12 +17,14 @@ class Rankings extends React.PureComponent {
 
   componentDidMount() {
     if (!this.props.allFighters) {
-      this.props.getFighters()
+      // this.props.getFighters()
     }
   }
 
   render() {
     const { allFighters, showTopFifteen } = this.props
+
+    logger.log(allFighters, 'HERE')
 
     return (
       <View style={styles.container}>
@@ -36,7 +39,13 @@ class Rankings extends React.PureComponent {
               fighters={allFighters}
               showTopFifteen={showTopFifteen}
             />
-          )) : null}
+          )) : (
+            <View>
+              <DivisionSkeleton division="Men's Flyweight" />
+              <DivisionSkeleton division="Men's Bantamweight" />
+              <DivisionSkeleton division="Men's Featherweight" />
+            </View>
+          )}
         </ScrollView>
       </View>
     );
